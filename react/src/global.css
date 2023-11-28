@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&family=VT323&display=swap');
+
+/* CSS para padronizar o estilo do site*/
+* {
+    margin: 0; /* Remove todas as margens padrão */
+    padding: 0; /* Remove todo o preenchimento padrão */
+    box-sizing: border-box; /* Os elementos serão inclusos o tamanho e largura e não apenas o conteúdo */
+    font-family: 'Montserrat', sans-serif; /* Define a fonte padrão do site */
+}
+
+body {
+    background-color: #ebebeb; /* Cor de fundo do site */
+}
+
+.container {
+    max-width: 1100px; /* Largura máxima do conteúdo de dentro do cabeçalho pode chegar */
+    margin: 0 auto; /* Distância da margem do conteúdo */
+}
