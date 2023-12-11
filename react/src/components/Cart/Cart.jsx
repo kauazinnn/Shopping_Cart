@@ -15,11 +15,9 @@ export function Cart() {
     return (
         <section className={`cart ${isCartVisible ? 'cart--active' : ''}`}>
             <div className="cart-items">
-
                 { cartItems.map((cartItem) => <CartItem key={cartItem.id} data={cartItem} />) }
-
             </div>
             <div className="cart-resume">{FormatCurrancy(totalPrice, 'BRL')}</div>
         </section>
-    )
+    )   
 }

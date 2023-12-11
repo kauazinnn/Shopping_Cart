@@ -14,7 +14,7 @@ export function Products() {
 
 
     useEffect(() => {
-        fetchProducts('tudo')
+        fetchProducts('iphone')
             .then((response) => {
                 setProducts(response)
                 setLoading(false);

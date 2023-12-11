@@ -24,7 +24,7 @@ export function ProductBuy({ isOpenModal, isCloseModal, data }) {
                         <h2 className='price'>{formatCurrency(price, 'BRL')}</h2>
                         <h4 className='blue-string'>Ver os meios de pagamento</h4>
                         <h3 className='strong-mensage'>Envio para todo o país</h3>
-                        <h4 className='clear-mensage'>Saiba os prazos de entrega e as formas de envio.</h4>
+                        <h3 className='clear-mensage'>Saiba os prazos de entrega e as formas de envio.</h3>
                         <h4 className='blue-string'>Calcular o prazo de entrega</h4>
 
                         <div className='button'>

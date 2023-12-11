@@ -1,6 +1,7 @@
 .products__card {
     width: 100%;
     max-width: 300px;
+    height: 370px;
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -8,6 +9,7 @@
     margin: 0;
     position: relative;
     padding: 10px;
+    border-radius: 5px;
 }
 
 .card__image {

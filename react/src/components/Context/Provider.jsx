@@ -4,12 +4,16 @@ import propTypes from 'prop-types';
 
 export function Provider({ children }) {
 
+    const [loading, setLoading] = useState(true);
+    const [openModal, setOpenModal] = useState(false)
+    const [isCartVisible, setIsCartVisible] = useState(true);
+    const [isOpenErrorModal, setIsOpenErrorModal] = useState(false);
+    
     const [products, setProducts] = useState([]);
     const [cartItems, setCartItems] = useState([]);
-    const [loading, setLoading] = useState(true);
-    const [isCartVisible, setIsCartVisible] = useState(false);
-    const [productList, setProductList] = useState ([]);
     const [modalItems, setModalItems] = useState([]);
+    const [productList, setProductList] = useState ([]);
+
 
     const value = {
         products,
@@ -23,7 +27,11 @@ export function Provider({ children }) {
         productList, 
         setProductList,
         modalItems,
-        setModalItems
+        setModalItems,
+        isOpenErrorModal,
+        setIsOpenErrorModal,
+        openModal, 
+        setOpenModal
     };
 
     return (

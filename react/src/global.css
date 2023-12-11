@@ -8,6 +8,10 @@
     font-family: 'Montserrat', sans-serif; /* Define a fonte padrão do site */
 }
 
+::-webkit-scrollbar {
+    width: 0px;
+}
+
 body {
     background-color: #ebebeb; /* Cor de fundo do site */
 }
