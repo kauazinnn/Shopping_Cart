@@ -6,6 +6,7 @@ export function ProductBuy({ isOpenModal, isCloseModal, data }) {
     const { title, thumbnail, price } = data;
 
     if (isOpenModal) {
+
         return (
             < div className='background-modal' >
                 <section className='product-content'>

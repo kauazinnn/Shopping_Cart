@@ -5,9 +5,9 @@ import propTypes from 'prop-types';
 export function Provider({ children }) {
 
     const [loading, setLoading] = useState(true);
-    const [openModal, setOpenModal] = useState(false)
     const [isCartVisible, setIsCartVisible] = useState(true);
     const [isOpenErrorModal, setIsOpenErrorModal] = useState(false);
+
     
     const [products, setProducts] = useState([]);
     const [cartItems, setCartItems] = useState([]);
@@ -30,8 +30,6 @@ export function Provider({ children }) {
         setModalItems,
         isOpenErrorModal,
         setIsOpenErrorModal,
-        openModal, 
-        setOpenModal
     };
 
     return (

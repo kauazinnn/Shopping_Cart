@@ -3,22 +3,22 @@ import propTypes from 'prop-types';
 import { BsFillCartPlusFill } from 'react-icons/bs';
 import formatCurrency from '../Utills/formatCurrency';
 import { AppContext } from '../Context/AppContext.js';
-import { useCallback, useContext, useEffect, useState } from 'react';
+import { useCallback, useContext, useState } from 'react';
 import { ProductBuy } from '../ProductsBuy/ProductsBuy.jsx';
 import { ErrorModal } from './ErrorModal.jsx';
 
 export function ProductCard({ data }) {
 
     const { id, title, thumbnail, price } = data;
-    const { cartItems, setCartItems, setModalItems, modalItems, isOpenErrorModal, setIsOpenErrorModal } = useContext(AppContext);
     const [openModal, setOpenModal] = useState(false);
+    const { cartItems, setCartItems, modalItems, setModalItems, setIsOpenErrorModal } = useContext(AppContext);
+
 
     const index = cartItems.findIndex(item => item.id === id);
 
-
+    
     const handleAddCart = useCallback((e) => {
         setCartItems([...cartItems, data]);
-        console.log(index)
         e.stopPropagation();
     }, [cartItems, data]);
 
@@ -31,7 +31,6 @@ export function ProductCard({ data }) {
     const handleAddModal = () => {
         setModalItems([...modalItems, data]);
         setOpenModal(true);
-        document.body.style.overflow = 'hidden';
     };
 
 
@@ -61,13 +60,12 @@ export function ProductCard({ data }) {
                 >
                     <BsFillCartPlusFill />
                 </button>
-
             </section>
             
             {modalItems.map((modalItem) => <ProductBuy
                 data={modalItem}
                 isOpenModal={openModal}
-                isCloseModal={() => setOpenModal(!openModal)} />)
+                isCloseModal={() => setOpenModal(!openModal)}/>)
             }
         </div>
     );
